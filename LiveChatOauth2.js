@@ -7,7 +7,7 @@ var baseAccountsUrl = 'https://accounts.livechat.com';
 var oAuth2Class = {
     agentToken: undefined,
     authorise: function () {
-        //Todo: figure out way to send with out cookie info.
+        //Todo: figure out way to send with out cookie info. Cookie is basically a location info
         //Todo: Also find some pre defined oAuth class
         var options = {
             'method': 'GET',
@@ -49,6 +49,7 @@ var oAuth2Class = {
 }
 
 function getCustomerAccessToken(agentToken, customerId) {
+    // Cookie is basically a location info
     var options = {
         'method': 'POST',
         'url': baseAccountsUrl + '/customer/',
